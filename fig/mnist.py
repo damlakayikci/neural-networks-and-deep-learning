@@ -6,7 +6,7 @@ Draws images based on the MNIST data."""
 
 #### Libraries
 # Standard library
-import cPickle
+import pickle
 import sys
 
 # My library
@@ -219,7 +219,7 @@ def load_data():
     """ Return the MNIST data as a tuple containing the training data,
     the validation data, and the test data."""
     f = open('../data/mnist.pkl', 'rb')
-    training_set, validation_set, test_set = cPickle.load(f)
+    training_set, validation_set, test_set = pickle.load(f)
     f.close()
     return (training_set, validation_set, test_set)
 
